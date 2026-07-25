@@ -3,25 +3,20 @@
     padding:0;
     font-family: 'Times New Roman', Times, serif;
 }
-/* body{
-    background-color: bisque;
-} */
+
 
 .parentContainer{
-  width: 300px;
+  /* width: 300px; */
+  width:60%;
   margin:0px auto;
   text-align: center;
+  font-size:12px;
+  padding:10px;
 }
 
-
-.parentContainer{
-    font-size:12px;
-}
 .product-cards{
-    height:200px;
-    width:200px;
-    padding:5px;
-    background-color: cyan;
+    height:auto;
+    width:300px;
     color: black;
     border:1px solid black;
     border-radius: 12px;
@@ -44,11 +39,25 @@ button:hover{
 .productContainer{
     height:auto;
     width:auto;
-    margin: auto;
+    margin: 10px;
     display:flex;
     flex-wrap: wrap;
     gap:10px;
 }
 .search_input{
     width:100%;
+    height:24px;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.product_image{
+    height:120px;
+    width : 100%;
+    border-radius: 12px;
+}
+.content_wrapper{
+    text-align: center;
+    margin-top: 3px;
+    padding:5px;
 }
