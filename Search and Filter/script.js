@@ -2,7 +2,7 @@ let products = [{
    Product: 'Mac m1 air',
    Price: 100000,
    Id:101,
-   Seller:'apple things',
+   Seller:'apple company',
    Instock:true
 },{
    Product: 'vivo y19',
