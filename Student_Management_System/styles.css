@@ -1,0 +1,36 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.nav_container{
+  display:flex;
+  /* justify-content: space-between; */
+  align-items:center;
+  width: 100vw;
+  height: 40px;
+  padding: 10px;
+  gap :60px;
+}
+.search_box{
+ position: relative;
+ /* align-items: center; */
+}
+
+.search_input{
+  width: 300px;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.search_icon_image{
+ position: absolute;
+ right:9px;
+ top:50%;
+ transform: translateY(-50%);
+}
