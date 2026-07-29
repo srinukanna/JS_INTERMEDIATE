@@ -16,6 +16,7 @@ html,body{
   height: 40px;
   padding: 10px;
   gap :60px;
+
 }
 .search_box{
  position: relative;
@@ -33,4 +34,27 @@ html,body{
  right:9px;
  top:50%;
  transform: translateY(-50%);
+}
+.dataContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap : 20px;
+  height: auto;
+  width :100vw;
+}
+.studentplaced{
+  border: 2px solid rgb(180, 242, 168);
+  height:auto;
+  width:auto;
+  padding : 5px;
+  border-radius: 12px;
+}
+.studentnotplaced{
+  border: 2px solid ;
+  opacity: 0.5;
+  border-color: lightslategray;
+}
+
+.resultContainer{
+  text-align: center;
 }
