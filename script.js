@@ -1,7 +1,7 @@
 const students =[];
  
 // const input = document.querySelector('.test_input');
-const input = document.querySelector('.textInput');
+const userInput = document.querySelector('.textInput');
 const addButton = document.querySelector('.addButton');
 const body = document.querySelector('body');
 
@@ -12,10 +12,10 @@ const studentContainer = document.querySelector('.studentContainer');
 
 const form = document.querySelector('.parentContainer');
 
-form.addEventListener('submit',(event)=>{
+form.addEventListener('click',(event)=>{
    event.preventDefault();
    if(inputAge.value === ""){return;}
-   const studentName = input.value.trim()
+   const studentName = userInput.value.trim()
    const studentAge = Number(inputAge.value);
    const studentDepartment = departmentName.value.trim();
 
@@ -29,7 +29,9 @@ form.addEventListener('submit',(event)=>{
    }
  students.push(studentObject);
  renderStudent(students);
- 
+  userInput.value ="";
+  inputAge.value = "";
+  departmentName.value=""
 });
 
 function renderStudent(studentList){
@@ -40,11 +42,14 @@ function renderStudent(studentList){
    return `<article class="studentCard ${student.age > 18 ? "letcheck":"giveTime"}">
            <h2> Name :${student.nameInput}</h2>
             <p> Age :${student.age}</p>
+            <p> studnetId:${student.id} </p>
             <p> Department name :${student.departmentInput}</p>
             </article>`
   });
 
   studentContainer.innerHTML=studentCard.join("");
+  
+
 }
 
 /*
