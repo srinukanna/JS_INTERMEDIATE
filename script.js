@@ -13,7 +13,9 @@ const studentContainer = document.querySelector('.studentContainer');
 const form = document.querySelector('.parentContainer');
 
 form.addEventListener('click',(event)=>{
+
    event.preventDefault();
+
    if(inputAge.value === ""){return;}
    const studentName = userInput.value.trim()
    const studentAge = Number(inputAge.value);
@@ -27,6 +29,7 @@ form.addEventListener('click',(event)=>{
      age  : studentAge,
      departmentInput : studentDepartment
    }
+
  students.push(studentObject);
  renderStudent(students);
   userInput.value ="";
@@ -48,8 +51,6 @@ function renderStudent(studentList){
   });
 
   studentContainer.innerHTML=studentCard.join("");
-  
-
 }
 
 /*
@@ -60,7 +61,7 @@ button.addEventListener('click',()=>{
    arr.push(newString);
    console.log(arr);
    input.value = "";
-});
+}); 
 */
 
 

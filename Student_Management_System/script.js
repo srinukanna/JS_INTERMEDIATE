@@ -1,13 +1,5 @@
 const students =[];
 
-// const obj={id: 101,
-// name : "kanna",
-// age : 22,
-// department:"CSE",
-// cgpa : 8.6,
-// gender : 'M',
-// placed : false}
-
 const searchInput = document.querySelector('.search_input');
 const dataContainer = document.querySelector('.dataContainer');
 const resultContainer = document.querySelector('.resultContainer');
@@ -28,7 +20,7 @@ function displayStudents(studentList){
 
   const studentRecords = studentList.map((student)=>{
       return `<article class = "studentplaced ${student.placed ? " " : "studentnotplaced"}">
-        <h2> ${student.name} </h2>
+        <h2>${student.name} </h2>
         <p> ${student.age} </p>
         <p> ${student.department}</p>
         <p> ${student.cgpa} </p>
