@@ -15,7 +15,7 @@ start.addEventListener("click", () => {
     return;
   }
   startTime = performance.now();
-  console.log(startTime);
+
   
   id = setInterval(() => {
     let currentTime = performance.now();
@@ -23,7 +23,7 @@ start.addEventListener("click", () => {
     updateDisplay(elapsedTime);
   }, 10);
 
-  console.log(id);
+
 });
 
 pause.addEventListener("click", () => {
