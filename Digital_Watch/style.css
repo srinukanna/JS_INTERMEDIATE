@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    font-size: 12px;
+}
+#digital{
+    font-size:  1.5rem; ;
+    text-align: center;
+    margin-top: 30px;
+}
+.button-wrapper{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+}
+
+button{
+    border-radius: 12px;
+    padding: 6px;
+    width: 60px;
+}
+
+
