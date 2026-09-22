@@ -10,6 +10,7 @@ const departmentName = document.getElementById('departmentName');
 const resultContainer = document.querySelector('.resultContainer');
 const studentContainer = document.querySelector('.studentContainer');
 
+
 const form = document.querySelector('.parentContainer');
 
 form.addEventListener('click',(event)=>{
@@ -31,7 +32,7 @@ form.addEventListener('click',(event)=>{
    }
 
  students.push(studentObject);
- renderStudent(students);
+//  renderStudent(students);
   userInput.value ="";
   inputAge.value = "";
   departmentName.value=""
