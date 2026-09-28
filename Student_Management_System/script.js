@@ -24,10 +24,11 @@ function displayStudents(studentList){
         <p> ${student.age} </p>
         <p> ${student.department}</p>
         <p> ${student.cgpa} </p>
-        <p> ${student.placed ? "Placed ✅ ":"Not placed ❌ "}
+        <p> ${student.placed ? "Placed ✅ ":"Not placed ❌ "} </p>
+        <button data-id = "${student.id}"> Delete </button>
         </article>`;
   } );
-   dataContainer.innerHTML = studentRecords.join(" ");
+   dataContainerContainer.innerHTML = studentRecords.join(" ");
 
 }
 
