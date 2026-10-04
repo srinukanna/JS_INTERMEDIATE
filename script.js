@@ -17,12 +17,11 @@ form.addEventListener('click',(event)=>{
 
    event.preventDefault();
 
-   if(inputAge.value === ""){return;}
+   if(inputAge.value === "" || inputAge.value === "" ||departmentName.value==="" ){return;}
    const studentName = userInput.value.trim()
    const studentAge = Number(inputAge.value);
    const studentDepartment = departmentName.value.trim();
 
-   if( studentName === "" || studentDepartment === "" ){return;}
    
    const studentObject ={
      id: Date.now(),
