@@ -1,4 +1,5 @@
 let students = [];
+let editStudentId = null;
 
 const searchInput = document.querySelector(".search_input");
 const dataContainer = document.querySelector(".dataContainer");
@@ -48,8 +49,35 @@ dataContainer.addEventListener("click", (event) => {
       return student.id !== targetStudent;
     });
 
+
     displayStudents(students);
   }
+   if (event.target.classList.contains("editButton")){
+      const editStudent = Number(event.target.dataset.id);
+      editStudentId = editStudent;
+      displayStudents(students);
+  
+    }
+    if (event.target.classList.contains("saveButton")){
+
+       const studentCard = event.target.closest('article');
+       let newName = studentCard.querySelector('.editName').value;
+       let newAge=Number(studentCard.querySelector('.editAge').value);
+       let newDepartment = studentCard.querySelector('.editDepartment').value;
+      //  const saveStudent = Number(event.target.dataset.id);
+       const savedData = students.find((student)=>{
+           return (student.id=== editStudentId);
+       });
+       savedData.name = newName;
+       savedData.age = newAge;
+       savedData.department = newDepartment;
+       editStudentId=null;
+       displayStudents(students);
+    }
+    if (event.target.classList.contains("cancelButton")){
+      editStudentId=null;
+      displayStudents(students);
+    }
 });
 
 function displayStudents(studentList) {
@@ -60,6 +88,16 @@ function displayStudents(studentList) {
   }
 
   const studentRecords = studentList.map((student) => {
+    if (student.id === editStudentId) {
+     return `
+       <article>
+             <input type="text" class="editName" value= "${student.name}" required>
+             <input type="number" class="editAge" value= "${student.age}" required>
+             <input type="text" class="editDepartment" value= "${student.department}" required>
+             <button data-id="${student.id}" class="saveButton"> Save </button>
+             <button data-id="${student.id}" class="cancelButton"> Cancel </button>
+       </article>`;
+      }
     return `<article>
         <h2>${student.name} </h2>
         <p> ${student.age} </p>
@@ -104,4 +142,5 @@ searchInput.addEventListener("input", (event) => {
     return student.name.toLowerCase().trim().includes(input);
   });
   displayStudents(searchResults);
+
 });
