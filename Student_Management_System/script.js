@@ -66,7 +66,7 @@ dataContainer.addEventListener("click", (event) => {
        let newDepartment = studentCard.querySelector('.editDepartment').value;
       //  const saveStudent = Number(event.target.dataset.id);
        const savedData = students.find((student)=>{
-           return (student.id=== editStudentId);
+           return (student.id === editStudentId);
        });
        savedData.name = newName;
        savedData.age = newAge;
