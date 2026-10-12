@@ -114,6 +114,7 @@ allStudents.addEventListener("click", () => {
   displayStudents(students);
 });
 
+
 cseStudents.addEventListener("click", () => {
   const cse = students.filter((student) => {
     return student.department.toLowerCase() == "cse";
